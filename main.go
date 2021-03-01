@@ -18,6 +18,10 @@ func main() {
 		panic(err)
 	}
 
+	if ballCount < 27 || ballCount > 127 {
+		panic("input out of range 27-127")
+	}
+
 	balls := NewBalls(ballCount)
 	continueCondition := true
 	halfDaysCounted := 0
